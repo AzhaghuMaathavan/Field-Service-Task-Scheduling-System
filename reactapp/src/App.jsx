@@ -14,10 +14,8 @@ export default function App() {
 
   return (
     <div>
-      {/* TITLE */}
       <h1>Task Management</h1>
 
-      {/* NAV BUTTONS */}
       <button onClick={() => { setView("add"); setSelected(null); }}>
         Add Task
       </button>
@@ -25,7 +23,6 @@ export default function App() {
         Task List
       </button>
 
-      {/* TASK LIST */}
       {view === "list" && !selected && (
         <div>
           {tasks.map(task => (
@@ -39,7 +36,6 @@ export default function App() {
         </div>
       )}
 
-      {/* ADD TASK FORM */}
       {view === "add" && (
         <div>
           <input
@@ -73,7 +69,6 @@ export default function App() {
         </div>
       )}
 
-      {/* TASK DETAILS */}
       {selected && (
         <div>
           <h2>Task Details</h2>
